@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	h1 Bio Form
+
+	form#bioForm(method="post", action="/formsubmit")
+		input(name="firstName", type="text",placeholder="First Name")
+		input(name="lastName", type="text",placeholder="Last Name")
+		input(name="submit", type="submit")
+	h3#userName
+		//- you need the above "h3" with a #name to tell the index.js file where to return the user submitted data this goes with item.7 
+
+block scripts
+	script(src='/scripts/index.js')
